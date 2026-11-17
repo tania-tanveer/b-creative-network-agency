@@ -60,3 +60,34 @@ if ("IntersectionObserver" in window) {
 }
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const heroArt = document.querySelector(".hero-art");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+if (heroArt && !reduceMotion.matches && finePointer.matches) {
+  const parallaxLayers = heroArt.querySelectorAll("[data-parallax]");
+  let pointerFrame = 0;
+  let pointerPosition = null;
+
+  function applyParallax() {
+    pointerFrame = 0;
+    const bounds = heroArt.getBoundingClientRect();
+    const x = pointerPosition ? ((pointerPosition.x - bounds.left) / bounds.width - 0.5) * 18 : 0;
+    const y = pointerPosition ? ((pointerPosition.y - bounds.top) / bounds.height - 0.5) * 18 : 0;
+
+    parallaxLayers.forEach((layer) => {
+      const depth = Number(layer.dataset.parallax);
+      layer.style.setProperty("--parallax-x", `${(x * depth).toFixed(2)}px`);
+      layer.style.setProperty("--parallax-y", `${(y * depth).toFixed(2)}px`);
+    });
+  }
+
+  function scheduleParallax(event) {
+    pointerPosition = event ? { x: event.clientX, y: event.clientY } : null;
+    if (!pointerFrame) pointerFrame = window.requestAnimationFrame(applyParallax);
+  }
+
+  heroArt.addEventListener("pointermove", scheduleParallax, { passive: true });
+  heroArt.addEventListener("pointerleave", () => scheduleParallax(null), { passive: true });
+}
