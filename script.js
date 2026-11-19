@@ -73,6 +73,28 @@ if ("IntersectionObserver" in window) {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const contactForm = document.querySelector("#contact-form");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const fields = [
+    ["Name", formData.get("name")],
+    ["Phone", formData.get("phone")],
+    ["Email", formData.get("email")],
+    ["Service", formData.get("service")],
+    ["Project", formData.get("project")]
+  ].filter(([, value]) => typeof value === "string" && value.trim());
+  const message = [
+    "Hello B-Creative, I'd like to inquire about your services.",
+    "",
+    ...fields.map(([label, value]) => `${label}: ${value.trim()}`)
+  ].join("\n");
+  const whatsappUrl = `https://wa.me/966597630124?text=${encodeURIComponent(message)}`;
+  window.location.assign(whatsappUrl);
+});
+
 const workSection = document.querySelector(".work-section");
 
 if (workSection) {
