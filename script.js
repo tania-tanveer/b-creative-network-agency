@@ -18,7 +18,7 @@ menuToggle.addEventListener("click", () => {
 
 navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 640) closeMenu();
+  if (window.innerWidth > 820) closeMenu();
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
@@ -83,8 +83,9 @@ contactForm.addEventListener("submit", (event) => {
     ["Name", formData.get("name")],
     ["Phone", formData.get("phone")],
     ["Email", formData.get("email")],
+    ["Subject", formData.get("subject")],
     ["Service", formData.get("service")],
-    ["Project", formData.get("project")]
+    ["Message", formData.get("message")]
   ].filter(([, value]) => typeof value === "string" && value.trim());
   const message = [
     "Hello B-Creative, I'd like to inquire about your services.",
