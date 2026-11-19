@@ -8,7 +8,7 @@
   <title>B-Creative Network Agency — Advertising &amp; IT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -26,8 +26,8 @@
       <div class="nav-links" id="primary-menu">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#work">Work</a>
         <a href="#clients">Our clients</a>
-        <a href="#work">Our work</a>
         <a class="nav-cta" href="#contact">Let's talk <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
       </div>
     </nav>
@@ -123,56 +123,164 @@
       </div>
     </section>
 
-    <section class="section work-section" id="work">
-      <div class="container">
-        <div class="section-heading work-heading reveal">
-          <div><p class="eyebrow"><span class="eyebrow-line"></span> Our projects</p><h2>Selected<br><span>creative work.</span></h2></div>
-          <p>Explore selected graphic design and video work from the B-Creative Network Agency portfolio.</p>
+    <section class="section work-section" id="work" aria-label="Our work">
+      <div class="container work-container">
+        <div class="work-video-section">
+          <p class="work-eyebrow">Our work</p>
+          <h2 class="work-title reveal" data-work-title aria-label="AI video editing and filmmaking projects">
+            <span class="work-title-ghost" aria-hidden="true">AI VIDEO EDITING &amp; <em>FILMMAKING PROJECTS</em></span>
+            <span class="work-title-live" aria-hidden="true"><span data-type-text="AI VIDEO EDITING &amp; "></span><em data-type-text="FILMMAKING PROJECTS"></em><span class="work-caret"></span></span>
+          </h2>
+          <div class="work-reel-frame" role="region" aria-label="Video projects">
+            <div class="work-reel-row" role="list" tabindex="0" aria-label="Scroll through video projects">
+              <article class="work-reel-card reveal" role="listitem">
+                <div class="work-video-media">
+                  <video preload="metadata" playsinline aria-label="Markhor Stimulant Drink">
+                    <source src="assets/Refreshing your feed the same way it refreshes your day. ⚡Markhor Stimulant Drink isn’t just an .mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                  </video>
+                  <button class="work-video-toggle" type="button" data-video-toggle aria-label="Play Markhor Stimulant Drink">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  </button>
+                  <span class="work-sr-only" data-video-status aria-live="polite"></span>
+                </div>
+                <div class="work-video-meta"><small>Food &amp; Beverage</small><b>Markhor Stimulant Drink</b></div>
+              </article>
+              <article class="work-reel-card reveal" role="listitem">
+                <div class="work-video-media">
+                  <video preload="metadata" playsinline aria-label="Markhor Stimulant Drink: Refreshing Your Day">
+                    <source src="assets/⚡ THE POWER HEROES CHOOSE.For those who lead, push limits, and never back down.Markhor Energy Dr.mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                  </video>
+                  <button class="work-video-toggle" type="button" data-video-toggle aria-label="Play Markhor Stimulant Drink: Refreshing Your Day">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  </button>
+                  <span class="work-sr-only" data-video-status aria-live="polite"></span>
+                </div>
+                <div class="work-video-meta"><small>Food &amp; Beverage</small><b>Markhor Stimulant Drink: Refreshing Your Day</b></div>
+              </article>
+              <article class="work-reel-card reveal" role="listitem">
+                <div class="work-video-media">
+                  <video preload="metadata" playsinline aria-label="Nature's Finest: A New Standard of Wellness">
+                    <source src="assets/NATURE’S FINEST. A NEW STANDARD OF WELLNESS.Discover a thoughtfully crafted beverage inspired by.mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                  </video>
+                  <button class="work-video-toggle" type="button" data-video-toggle aria-label="Play Nature's Finest: A New Standard of Wellness">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  </button>
+                  <span class="work-sr-only" data-video-status aria-live="polite"></span>
+                </div>
+                <div class="work-video-meta"><small>Food &amp; Beverage</small><b>Nature's Finest: A New Standard of Wellness</b></div>
+              </article>
+              <article class="work-reel-card reveal" role="listitem">
+                <div class="work-video-media">
+                  <video preload="metadata" playsinline aria-label="Saif Group of Companies: Saif Sky Rise">
+                    <source src="assets/WhatsApp Video 2026-11-17 at 12.53.37 PM.mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                  </video>
+                  <button class="work-video-toggle" type="button" data-video-toggle aria-label="Play Saif Group of Companies: Saif Sky Rise">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  </button>
+                  <span class="work-sr-only" data-video-status aria-live="polite"></span>
+                </div>
+                <div class="work-video-meta"><small>Real Estate</small><b>Saif Group of Companies: Saif Sky Rise</b></div>
+              </article>
+            </div>
+            <button class="work-reel-arrow work-reel-arrow--prev" type="button" data-reel-prev aria-label="Scroll to previous projects" hidden>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="work-reel-arrow work-reel-arrow--next" type="button" data-reel-next aria-label="Scroll to next projects" hidden>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-        <div class="filter-row" role="group" aria-label="Filter projects">
-          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All projects</button>
-          <button class="filter-button" type="button" data-filter="graphic" aria-pressed="false">Graphic design</button>
-          <button class="filter-button" type="button" data-filter="video" aria-pressed="false">Video</button>
+
+        <div class="work-graphic-section reveal">
+          <p class="work-eyebrow">Our work</p>
+          <h2 class="work-title" data-work-title aria-label="Graphic design projects">
+            <span class="work-title-ghost" aria-hidden="true">GRAPHIC <em>DESIGN PROJECTS</em></span>
+            <span class="work-title-live" aria-hidden="true"><span data-type-text="GRAPHIC "></span><em data-type-text="DESIGN PROJECTS"></em><span class="work-caret"></span></span>
+          </h2>
+          <div class="work-graphic-frame">
+            <div class="work-graphic-grid">
+              <article class="work-graphic-card reveal">
+                <button class="work-graphic-media" type="button" data-project-view aria-label="View Dental Care">
+                  <img src="assets/projects/reference-dental-care.webp" alt="Dental Care campaign artwork" loading="lazy" decoding="async">
+                  <span class="work-project-action"><i class="fa-solid fa-play" aria-hidden="true"></i> View design</span>
+                </button>
+                <div class="work-project-meta"><small>Healthcare &amp; Beauty</small><b>Dental Care</b></div>
+              </article>
+              <article class="work-graphic-card reveal">
+                <button class="work-graphic-media" type="button" data-project-view aria-label="View A Spark of Royalty">
+                  <img src="assets/projects/reference-aurora-ring.webp" alt="A Spark of Royalty jewellery campaign" loading="lazy" decoding="async">
+                  <span class="work-project-action"><i class="fa-solid fa-play" aria-hidden="true"></i> View design</span>
+                </button>
+                <div class="work-project-meta"><small>Jewellery</small><b>A Spark of Royalty</b></div>
+              </article>
+              <article class="work-graphic-card reveal">
+                <button class="work-graphic-media" type="button" data-project-view aria-label="View Drops of Shine">
+                  <img src="assets/projects/reference-drops-of-shine.webp" alt="Drops of Shine skincare campaign" loading="lazy" decoding="async">
+                  <span class="work-project-action"><i class="fa-solid fa-play" aria-hidden="true"></i> View design</span>
+                </button>
+                <div class="work-project-meta"><small>Healthcare &amp; Beauty</small><b>Drops of Shine</b></div>
+              </article>
+              <article class="work-graphic-card reveal">
+                <button class="work-graphic-media" type="button" data-project-view aria-label="View Obhur Living 2">
+                  <img src="assets/projects/reference-obhur-living.webp" alt="Obhur Living 2 real estate campaign" loading="lazy" decoding="async">
+                  <span class="work-project-action"><i class="fa-solid fa-play" aria-hidden="true"></i> View design</span>
+                </button>
+                <div class="work-project-meta"><small>Real Estate</small><b>Obhur Living 2</b></div>
+              </article>
+            </div>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card reveal" data-category="video">
-            <div class="project-image project-video-frame"><video class="project-video" controls preload="metadata" playsinline aria-label="Markhor Stimulant Drink video"><source src="assets/Refreshing your feed the same way it refreshes your day. ⚡Markhor Stimulant Drink isn’t just an .mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-            <div class="project-meta"><div><p>Food &amp; Beverage · Video</p><h3>Markhor Stimulant Drink</h3><p class="project-description">Video project for a food and beverage brand.</p></div><a class="project-link" href="https://markhordrinks.com" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="video">
-            <div class="project-image project-video-frame"><video class="project-video" controls preload="metadata" playsinline aria-label="Saif Group video"><source src="assets/WhatsApp Video 2026-11-17 at 12.53.37 PM.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-            <div class="project-meta"><div><p>Real Estate · Video</p><h3>Saif Group</h3><p class="project-description">Video project for a real-estate client.</p></div><a class="project-link" href="https://thesaifgroup.com/" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="video">
-            <div class="project-image project-video-frame"><video class="project-video" controls preload="metadata" playsinline aria-label="Nature's Finest video"><source src="assets/NATURE’S FINEST. A NEW STANDARD OF WELLNESS.Discover a thoughtfully crafted beverage inspired by.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-            <div class="project-meta"><div><p>Food &amp; Beverage · Video</p><h3>Nature's Finest: A New Standard of Wellness</h3><p class="project-description">Video project for a wellness beverage.</p></div><a class="project-link" href="mailto:bcreativenetworkagency@gmail.com?subject=Nature%27s%20Finest%20project">Ask about project <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="video">
-            <div class="project-image project-video-frame"><video class="project-video" controls preload="metadata" playsinline aria-label="Markhor Energy Drink video"><source src="assets/⚡ THE POWER HEROES CHOOSE.For those who lead, push limits, and never back down.Markhor Energy Dr.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
-            <div class="project-meta"><div><p>Food &amp; Beverage · Video</p><h3>Markhor Energy Drink</h3><p class="project-description">Video project for an energy drink brand.</p></div><a class="project-link" href="https://markhordrinks.com" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="graphic">
-            <a class="project-image project-thumbnail" href="https://www.behance.net/gallery/246626481/Dental-Care" target="_blank" rel="noopener noreferrer" aria-label="View Dental Care on Behance"><img src="assets/projects/dental-care.jpeg" alt="Dental Care graphic design project" loading="lazy" decoding="async"><span class="image-open" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
-            <div class="project-meta"><div><p>Healthcare &amp; Beauty · Graphic design</p><h3>Dental Care</h3><p class="project-description">Graphic design project from the Behance portfolio.</p></div><a class="project-link" href="https://www.behance.net/gallery/246626481/Dental-Care" target="_blank" rel="noopener noreferrer">View on Behance <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="graphic">
-            <a class="project-image project-thumbnail" href="https://www.behance.net/gallery/246759881/Aurora-Ring-Designs" target="_blank" rel="noopener noreferrer" aria-label="View Aurora Ring Designs on Behance"><img src="assets/projects/aurora-ring.jpeg" alt="Aurora Ring Designs jewellery project" loading="lazy" decoding="async"><span class="image-open" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
-            <div class="project-meta"><div><p>Jewellery · Graphic design</p><h3>Aurora Ring Designs</h3><p class="project-description">Jewellery design project from the Behance portfolio.</p></div><a class="project-link" href="https://www.behance.net/gallery/246759881/Aurora-Ring-Designs" target="_blank" rel="noopener noreferrer">View on Behance <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="graphic">
-            <a class="project-image project-thumbnail" href="https://www.behance.net/gallery/250892865/Deduce-Aesthetic-Clinic" target="_blank" rel="noopener noreferrer" aria-label="View Deduce Aesthetic Clinic on Behance"><img src="assets/projects/deduce-aesthetic-clinic.png" alt="Deduce Aesthetic Clinic graphic design project" loading="lazy" decoding="async"><span class="image-open" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
-            <div class="project-meta"><div><p>Healthcare &amp; Beauty · Graphic design</p><h3>Deduce Aesthetic Clinic</h3><p class="project-description">Aesthetic clinic project from the Behance portfolio.</p></div><a class="project-link" href="https://www.behance.net/gallery/250892865/Deduce-Aesthetic-Clinic" target="_blank" rel="noopener noreferrer">View on Behance <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="graphic">
-            <a class="project-image project-thumbnail" href="https://www.behance.net/gallery/255465531/DEAL-REAL-ESTATE-PROJECT-(OBHUR-LIVING-2-)" target="_blank" rel="noopener noreferrer" aria-label="View Deal Real Estate project on Behance"><img src="assets/projects/deal-obhur-living.jpeg" alt="Deal Obhur Living 2 real estate design project" loading="lazy" decoding="async"><span class="image-open" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
-            <div class="project-meta"><div><p>Real Estate · Graphic design</p><h3>DEAL Real Estate — Obhur Living 2</h3><p class="project-description">Real estate design project from the Behance portfolio.</p></div><a class="project-link" href="https://www.behance.net/gallery/255465531/DEAL-REAL-ESTATE-PROJECT-(OBHUR-LIVING-2-)" target="_blank" rel="noopener noreferrer">View on Behance <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card reveal" data-category="graphic">
-            <a class="project-image project-thumbnail" href="https://www.behance.net/gallery/254328503/City-University-Independence-Day-Compaign" target="_blank" rel="noopener noreferrer" aria-label="View City University Independence Day campaign on Behance"><img src="assets/projects/city-university-independence-day.png" alt="City University Independence Day campaign graphic design" loading="lazy" decoding="async"><span class="image-open" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
-            <div class="project-meta"><div><p>Education · Graphic design</p><h3>City University — Independence Day</h3><p class="project-description">Campaign design from the Behance portfolio.</p></div><a class="project-link" href="https://www.behance.net/gallery/254328503/City-University-Independence-Day-Compaign" target="_blank" rel="noopener noreferrer">View on Behance <span aria-hidden="true">↗</span></a></div>
-          </article>
+
+        <div class="work-web-section reveal">
+          <p class="work-eyebrow">Our work</p>
+          <h2 class="work-title work-title--web" data-work-title aria-label="Website development projects">
+            <span class="work-title-ghost" aria-hidden="true">WEBSITE <em>DEVELOPMENT PROJECTS</em></span>
+            <span class="work-title-live" aria-hidden="true"><span data-type-text="WEBSITE "></span><em data-type-text="DEVELOPMENT PROJECTS"></em><span class="work-caret"></span></span>
+          </h2>
+          <div class="work-web-grid">
+            <a class="work-web-card reveal" href="https://thesaifgroup.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Saif Group website">
+              <div class="work-web-shot">
+                <div class="work-web-bar"><i></i><i></i><i></i><span>thesaifgroup.com</span></div>
+                <div class="work-web-view"><div class="work-web-preview" style="--site-hue:#1d3557"><b>Saif Group</b><small>thesaifgroup.com</small></div></div>
+              </div>
+              <div class="work-web-meta"><span><small>Real Estate</small><b>Saif Group</b></span><span class="work-web-go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+            </a>
+            <a class="work-web-card reveal" href="https://markhordrinks.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Markhor Drinks website">
+              <div class="work-web-shot">
+                <div class="work-web-bar"><i></i><i></i><i></i><span>markhordrinks.com</span></div>
+                <div class="work-web-view"><div class="work-web-preview" style="--site-hue:#185b43"><b>Markhor Drinks</b><small>markhordrinks.com</small></div></div>
+              </div>
+              <div class="work-web-meta"><span><small>Food &amp; Beverage</small><b>Markhor Drinks</b></span><span class="work-web-go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+            </a>
+            <a class="work-web-card reveal" href="https://oxfordacademy.edu.sa/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Oxford Academy website">
+              <div class="work-web-shot">
+                <div class="work-web-bar"><i></i><i></i><i></i><span>oxfordacademy.edu.sa</span></div>
+                <div class="work-web-view"><div class="work-web-preview" style="--site-hue:#5c3574"><b>Oxford Academy</b><small>oxfordacademy.edu.sa</small></div></div>
+              </div>
+              <div class="work-web-meta"><span><small>Education</small><b>Oxford Academy</b></span><span class="work-web-go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+            </a>
+            <a class="work-web-card reveal" href="https://deal.com.sa/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deal website">
+              <div class="work-web-shot">
+                <div class="work-web-bar"><i></i><i></i><i></i><span>deal.com.sa</span></div>
+                <div class="work-web-view"><div class="work-web-preview" style="--site-hue:#a94023"><b>Deal</b><small>deal.com.sa</small></div></div>
+              </div>
+              <div class="work-web-meta"><span><small>Real Estate</small><b>Deal</b></span><span class="work-web-go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+            </a>
+          </div>
         </div>
       </div>
+
+      <dialog class="work-lightbox" aria-labelledby="work-lightbox-title">
+        <button class="work-lightbox-close" type="button" data-lightbox-close aria-label="Close project preview"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <figure>
+          <img data-lightbox-image src="" alt="">
+          <figcaption><small data-lightbox-category></small><b id="work-lightbox-title" data-lightbox-title></b></figcaption>
+        </figure>
+      </dialog>
     </section>
 
     <section class="section process-section" id="approach">
