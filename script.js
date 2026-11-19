@@ -27,36 +27,41 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const serviceTabs = [...document.querySelectorAll(".service-tab")];
+
+function selectServiceTab(tab, focusTab) {
+  serviceTabs.forEach((serviceTab) => {
+    const selected = serviceTab === tab;
+    serviceTab.setAttribute("aria-selected", String(selected));
+    serviceTab.tabIndex = selected ? 0 : -1;
+    document.getElementById(serviceTab.getAttribute("aria-controls")).hidden = !selected;
+  });
+
+  if (focusTab) tab.focus();
+}
+
+serviceTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => selectServiceTab(tab, false));
+  tab.addEventListener("keydown", (event) => {
+    let nextIndex;
+    if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = (index + 1) % serviceTabs.length;
+    if (event.key === "ArrowUp" || event.key === "ArrowLeft") nextIndex = (index - 1 + serviceTabs.length) % serviceTabs.length;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = serviceTabs.length - 1;
+
+    if (nextIndex !== undefined) {
+      event.preventDefault();
+      selectServiceTab(serviceTabs[nextIndex], true);
+    }
+  });
+});
+
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
-      }
-
-      const fineMotion = window.matchMedia("(hover: hover) and (pointer: fine)");
-      const motionReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-      if (fineMotion.matches && !motionReduced.matches) {
-        document.querySelectorAll(".service-card").forEach((card) => {
-          card.addEventListener("pointermove", (event) => {
-            const bounds = card.getBoundingClientRect();
-            const x = (event.clientX - bounds.left) / bounds.width;
-            const y = (event.clientY - bounds.top) / bounds.height;
-            card.style.setProperty("--spot-x", `${x * 100}%`);
-            card.style.setProperty("--spot-y", `${y * 100}%`);
-            card.style.setProperty("--tilt-x", `${(x - 0.5) * 5}deg`);
-            card.style.setProperty("--tilt-y", `${(0.5 - y) * 5}deg`);
-          });
-
-          card.addEventListener("pointerleave", () => {
-            card.style.setProperty("--spot-x", "50%");
-            card.style.setProperty("--spot-y", "50%");
-            card.style.setProperty("--tilt-x", "0deg");
-            card.style.setProperty("--tilt-y", "0deg");
-          });
-        });
       }
     });
   }, { threshold: 0.1 });
